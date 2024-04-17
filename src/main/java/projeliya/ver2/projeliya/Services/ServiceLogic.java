@@ -877,7 +877,7 @@ private void analyzeRuntime(long[] arrSlopes, long[] arrayRealDifference, int st
 
     public static String chatGPT(String message) {
         String url = "https://api.openai.com/v1/chat/completions";
-        String apiKey = "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";
+        String apiKey = " ";
         String model = "gpt-3.5-turbo";
 
         try {
