@@ -303,12 +303,12 @@ public class ServiceLogic {
             // Get a score from chatGPT
             System.out.println("im start the chatGPT Thread");
             System.out.println("the question:" + examinationQuestion.getId());
-            Thread t = chatGptFuncThread(cleanedMethod2, examinationQuestion.getId());
-            t.start();
-            t.join();
+           // Thread t = chatGptFuncThread(cleanedMethod2, examinationQuestion.getId());
+            // t.start();
+            // t.join();
             System.out.println("end chatGpt Thread");
             System.out.println("---" + resultStringGpt + "---");
-            double chatGptScore = Double.parseDouble(resultStringGpt);
+            double chatGptScore = 10;
             System.out.println(timeScore + "timeScore");
             System.out.println("timeWeighted: " + timeWeighted);
             if (successRate > 100) {
@@ -877,7 +877,7 @@ private void analyzeRuntime(long[] arrSlopes, long[] arrayRealDifference, int st
 
     public static String chatGPT(String message) {
         String url = "https://api.openai.com/v1/chat/completions";
-        String apiKey = " ";
+        String apiKey = "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";
         String model = "gpt-3.5-turbo";
 
         try {
